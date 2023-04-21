@@ -53,15 +53,8 @@ export async function getStaticPaths() {
   const pathsWithParams = ids.map((id) => ({ params: { pid: id } }));
 
   return {
-    path: pathsWithParams,
-    // paths: [
-    // { params: { pid: "p1" } },
-    // { params: { pid: "p2" } },
-    // { params: { pid: "p3" } },
-    // ],
-    // fallback: true,
-    // fallback: "blocking",
-    // fallback: false,
+    paths: pathsWithParams,
+    fallback: "blocking",
   };
 }
 
